@@ -8,8 +8,10 @@
  **************************************************************/
 
 var GLOBAL_user
-
-function fb_authenticate() {
+function fb_login() {
+  authenticationListener = firebase.auth().onAuthStateChanged(fb_authenticate, fb_error)
+}
+function fb_authenticate(_user) {
  if(_user){
     console.log("User Is Logged In")
     GLOBAL_user = _user;

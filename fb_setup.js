@@ -7,3 +7,9 @@ const firebaseConfig = {
   messagingSenderId: "615513125295",
   appId: "1:615513125295:web:4a5a7af46b468ab019ff5a"
   };
+  firebase.initializeApp(firebaseConfig);
+
+// This log prints the firebase object to the console to show that it is working.
+// As soon as you have the script working, delete this log.
+console.log("Firebase initialize finished:");
+console.log(firebase);
