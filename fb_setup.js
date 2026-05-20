@@ -1,6 +1,6 @@
 const firebaseConfig = {
   apiKey: "AIzaSyDr_w7idgxVzZCoSgAfyJrE19q9x86cozY",
-  authDomain: "jackson-li-12comp.firebaseapp.com",
+  authDomain: "https://vigilant-eureka-r46v99gr45x6f547v-5500.app.github.dev",
   databaseURL: "https://jackson-li---sals-strawberries-default-rtdb.asia-southeast1.firebasedatabase.app/",
   projectId: "Jackson Li - Sals Strawberries",
   storageBucket: "Jackson Li - Sals Strawberries.firebasestorage.app",
