@@ -7,8 +7,13 @@ let uid;
 
 function fb_write() {
 console.log("Test");
-firebase.database().ref('/').set("Test");
+firebase.database().ref('/').set(
+    {
+      message: 'Test'
+    }
+  )
 }
+
 
 function writeForm() {
     if (uid == null) {
