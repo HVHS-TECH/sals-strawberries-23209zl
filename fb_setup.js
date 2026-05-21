@@ -1,12 +1,14 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDr_w7idgxVzZCoSgAfyJrE19q9x86cozY",
-  authDomain: "https://vigilant-eureka-r46v99gr45x6f547v-5500.app.github.dev",
-  databaseURL: "https://jackson-li---sals-strawberries-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  projectId: "Jackson Li - Sals Strawberries",
-  storageBucket: "Jackson Li - Sals Strawberries.firebasestorage.app",
-  messagingSenderId: "615513125295",
-  appId: "1:615513125295:web:4a5a7af46b468ab019ff5a"
-  };
+  apiKey: "AIzaSyAgXy0z5Dlp4N8p8dcA7yAp5mHVMcTj0Nc",
+  authDomain: "jackson-li---sals-strawberries.firebaseapp.com",
+  databaseURL: "https://jackson-li---sals-strawberries-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "jackson-li---sals-strawberries",
+  storageBucket: "jackson-li---sals-strawberries.firebasestorage.app",
+  messagingSenderId: "639207063451",
+  appId: "1:639207063451:web:7c697021cb728efe00ab3e",
+  measurementId: "G-7YZYM0HXYX"
+};
+
   firebase.initializeApp(firebaseConfig);
 
 // This log prints the firebase object to the console to show that it is working.

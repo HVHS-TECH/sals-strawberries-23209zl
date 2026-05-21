@@ -1,13 +1,23 @@
-
 console.log("Running Sal's Strawberries")
 
-function writeForm(){
-    // Get the form data
-    const favoriteFruit = document.getElementById("favoriteFruit").value;
-    const name = document.getElementById('name').value;
-    const fruitQuantity = document.getElementById('fruitQuantity').value;
+let favoriteFruit;
+let userName;
+let fruitQuantity;
+let uid;
 
-    firebase.database().ref('/').set(
-    
-    )
+function fb_write() {
+console.log("Test");
+firebase.database().ref('/').set("Test");
 }
+
+function writeForm() {
+    if (uid == null) {
+        alert("Please Log In First!");
+    } else {
+        favoriteFruit = document.getElementById("favoriteFruit").value;
+        userName = document.getElementById('userName').value;
+        fruitQuantity = document.getElementById('fruitQuantity').value;
+    }
+}
+
+
