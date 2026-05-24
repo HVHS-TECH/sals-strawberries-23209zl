@@ -1,28 +1,24 @@
 console.log("Running Sal's Strawberries")
 
-let favoriteFruit;
-let userName;
-let fruitQuantity;
-let uid;
+var uid;
 
 function fb_write() {
-console.log("Test");
-firebase.database().ref('/').set(
-    {
-      message: 'Test'
-    }
-  )
-}
-
-
-function writeForm() {
     if (uid == null) {
         alert("Please Log In First!");
-    } else {
-        favoriteFruit = document.getElementById("favoriteFruit").value;
-        userName = document.getElementById('userName').value;
-        fruitQuantity = document.getElementById('fruitQuantity').value;
+    }
+    if (usersName == null || favoriteFruit == null || fruitQuantity == null) {
+        alert("you must fill out all boxes before submitting the form!");
     }
 }
+
+function writeForm() {
+        var favoriteFruit = document.getElementById("favoriteFruit").value;
+        var userName = document.getElementById('userName').value;
+        var fruitQuantity = document.getElementById('fruitQuantity').value;
+
+        console.log(userName + " likes " + favoriteFruit);
+    }
+
+firebase.database().ref('/fruit').once(writeForm);
 
 
