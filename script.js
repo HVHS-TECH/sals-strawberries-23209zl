@@ -17,7 +17,7 @@ function fb_write() {
         return;
     }
 
-    firebase.database().ref('/favouriteFruit').push({
+    firebase.database().ref('/users/' + GLOBAL_user["uid"]).set({
         name: userName,
         fruit: favoriteFruit,
         quantity: fruitQuantity
@@ -26,16 +26,5 @@ function fb_write() {
     console.log("Data sent to Firebase");
 }
 
-function writeForm(snapshot) {
-    var data = snapshot.val();
-    console.log(data);
-
-    for (let key in data) {
-        let item = data[key];
-        console.log(item.name + " likes " + item.fruit);
-    }
-}
-
-firebase.database().ref('/favouriteFruit').on('value', writeForm);
 
 
