@@ -11,12 +11,15 @@ var GLOBAL_user
 function fb_login() {
   authenticationListener = firebase.auth().onAuthStateChanged(fb_authenticate, fb_error)
 }
+var uid;
+
 function fb_authenticate(_user) {
- if(_user){
-    console.log("User Is Logged In")
+  if (_user) {
+    console.log("User Is Logged In");
     GLOBAL_user = _user;
-  }else{
-    console.log("User Is NOT Logged In - Starting the popup process")
+    uid = _user.uid;  
+  } else {
+    console.log("User Is NOT Logged In - Starting the popup process");
     fb_popupLogin();
   }
 }
