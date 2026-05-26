@@ -11,14 +11,14 @@ function fb_write() {
     }
 }
 
-function writeForm() {
+function writeForm(snapshot) {
         var favoriteFruit = document.getElementById("favoriteFruit").value;
         var userName = document.getElementById('userName').value;
         var fruitQuantity = document.getElementById('fruitQuantity').value;
-
+        console.log(snapshot.val());
         console.log(userName + " likes " + favoriteFruit);
     }
 
-firebase.database().ref('/fruit').once(writeForm);
+firebase.database().ref('/favouriteFruit').on(writeForm)
 
 
