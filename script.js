@@ -26,5 +26,26 @@ function fb_write() {
     console.log("Data sent to Firebase");
 }
 
+function fb_readEmail() {
+    if (uid == null) {
+        alert("Please Log In First!");
+        return;
+    }
+
+    <div>
+        <p>To: ${userName}</p>
+        <p>From: Sal's Strawberry Saloon</p>
+        <p>Hello, ${userName}</p>
+        <p>
+            This is Sal's Strawberry Saloon, buy some fruits from us now.
+        </p>
+        <p>
+            Your favourite fruit is ${favoriteFruit}
+        </p>
+        <p>
+            Your serving for this fruit ${fruitQuantity} times a week.
+        </p>
+    </div>
+}
 
 
